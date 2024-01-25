@@ -34,3 +34,83 @@ Example Output:
 ... // more action pairs
 
 ]"
+
+## Prompts in Section 3.1.2 generating objects to construct verb phrases
+
+You are a professional motion analyst. Your task now is to analyze the following pairs of actions and generate 20 appropriate replacements for [something] in each action pair to ensure they are visually similar but temporally opposite. Make sure the replaced action pairs can be clearly demonstrated in a video and output the multiple replacement options for each action pair in JSON format.
+
+Processing steps:
+
+1.Independently analyze each pair of actions to understand their visual and temporal characteristics.
+
+2.Choose 20 suitable objects or actions for [something].
+
+3.Ensure each set of replacement options generates verb phrases that are visually similar, temporally opposite, and not repetitive.
+
+4.Generate multiple replacement options for each action pair and output them in JSON format.
+
+Example:
+
+Input:
+
+open something, close something
+
+lift something, drop something
+
+push something, pull something
+
+... // more action pairs
+
+Output:
+
+{
+
+"open something": [
+
+["open the door", "close the door"],
+
+["open the window", "close the window"],
+
+["open the book", "close the book"],
+
+... // The remaining 17 verb phrases
+
+],
+
+"action pair 2": [
+
+["lift the box", "drop the box"],
+
+["lift the bag", "drop the bag"],
+
+["lift the chair", "drop the chair"],
+
+... // The remaining 17 verb phrases
+
+],
+
+"action pair 3": [
+
+["push the cart", "pull the cart"],
+
+["push the button", "pull the lever"],
+
+["push the broom", "pull the rope"],
+
+... // The remaining 17 verb phrases
+
+],
+
+}
+
+For this message, you just need to understand. I will input the action pairs I have provided in the next message. Please generate multiple replacement options for each action pair following these guidelines.
+
+
+
+
+
+
+
+
+
+

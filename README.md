@@ -25,17 +25,15 @@ Use JSON format for output. Each action pair should be an object containing two 
 
 Example Output:
 
-'''
-[
-
-  {"action1": "open [something]", "action2": "close [something]"},
+  [
   
-  {"action1": "pick up [something]", "action2": "put down [something]"},
+    {"action1": "open [something]", "action2": "close [something]"},
+    
+    {"action1": "pick up [something]", "action2": "put down [something]"},
+    
+    ... // more action pairs
   
-  ... // more action pairs
-
-]
-'''
+  ]
 
 ## Prompts in Section 3.1.2 generating objects to construct verb phrases
 
@@ -55,59 +53,59 @@ Example:
 
 Input:
 
-'''[
-
-  {"action1": "open [something]", "action2": "close [something]"},
+  [
   
-  {"action1": "lift [something]", "action2": "drop [something]"},
+    {"action1": "open [something]", "action2": "close [something]"},
+    
+    {"action1": "lift [something]", "action2": "drop [something]"},
+    
+    {"action1": "push [something]", "action2": "pull [something]"},
+    
+    ... // more action pairs
   
-  {"action1": "push [something]", "action2": "pull [something]"},
-  
-  ... // more action pairs
-
-]'''
+  ]
 
 Output:
 
-'''{
-
-  "action pair 1": [
+  {
   
-    ["open the door", "close the door"],
+    "action pair 1": [
     
-    ["open the window", "close the window"],
-    
-    ["open the book", "close the book"],
-    
-    ... // The remaining 17 verb phrases
-
-  ],
-
-  "action pair 2": [
+      ["open the door", "close the door"],
+      
+      ["open the window", "close the window"],
+      
+      ["open the book", "close the book"],
+      
+      ... // The remaining 17 verb phrases
   
-    ["lift the box", "drop the box"],
-    
-    ["lift the bag", "drop the bag"],
-    
-    ["lift the chair", "drop the chair"],
-    
-    ... // The remaining 17 verb phrases
+    ],
   
-  ],
-  
-  "action pair 3": [
-  
-    ["push the cart", "pull the cart"],
+    "action pair 2": [
     
-    ["push the button", "pull the lever"],
+      ["lift the box", "drop the box"],
+      
+      ["lift the bag", "drop the bag"],
+      
+      ["lift the chair", "drop the chair"],
+      
+      ... // The remaining 17 verb phrases
     
-    ["push the broom", "pull the rope"],
+    ],
     
-    ... // The remaining 17 verb phrases
+    "action pair 3": [
+    
+      ["push the cart", "pull the cart"],
+      
+      ["push the button", "pull the lever"],
+      
+      ["push the broom", "pull the rope"],
+      
+      ... // The remaining 17 verb phrases
+    
+    ],
   
-  ],
-
-}'''
+  }
 
 For this message, you just need to understand. I will input the action pairs I have provided in the next message. Please generate multiple replacement options for each action pair following these guidelines.
 
@@ -127,55 +125,55 @@ In the rewriting process, you can selectively use the following devices:
 
 Both my input and the format you should output are in JSON format and should not contain redundancy for the program to parse.
 
-'''{
-
-  "text1": "It's a very nice day for a walk.",
+  {
   
-  "text2": "The sky is blue.",
-  
-   // Other more input sentence cases
-   
-}'''
+    "text1": "It's a very nice day for a walk.",
+    
+    "text2": "The sky is blue.",
+    
+     // Other more input sentence cases
+     
+  }
 
 Sample output is as follows:
 
-'''{
-
-  "text1":{
+  {
   
-  "original": "It's a very nice day for a walk.",
-  
-  "rewrites": [
-  
-    "Today's weather is pleasant and perfect for a walk outside.",
+    "text1":{
     
-    "It's a beautiful sunny day, perfect for a walk.",
+    "original": "It's a very nice day for a walk.",
     
-    "It's a sunny and pleasant day, just right for a walk outside.",
+    "rewrites": [
     
-    "... (the remaining 6 rewritten versions)"
+      "Today's weather is pleasant and perfect for a walk outside.",
+      
+      "It's a beautiful sunny day, perfect for a walk.",
+      
+      "It's a sunny and pleasant day, just right for a walk outside.",
+      
+      "... (the remaining 6 rewritten versions)"
+      
+    ]}
     
-  ]}
-  
-  "text2":{
-  
-  "original": "The sky is blue.",
-  
-  "rewrites": [
-  
-    "The color blue covers the sky.",
+    "text2":{
     
-    "The sky shows its blue color.",
+    "original": "The sky is blue.",
     
-    "We see the sky with a blue color.",
+    "rewrites": [
     
-    "... (the remaining 6 rewritten versions)"
+      "The color blue covers the sky.",
+      
+      "The sky shows its blue color.",
+      
+      "We see the sky with a blue color.",
+      
+      "... (the remaining 6 rewritten versions)"
+      
+    ]}
     
-  ]}
-  
-  // Other more output
-  
-}'''
+    // Other more output
+    
+  }
 
 For this message you just need to understand it, I will give you the correctly formatted input next.
 

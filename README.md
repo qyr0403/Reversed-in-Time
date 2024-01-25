@@ -25,7 +25,8 @@ Use JSON format for output. Each action pair should be an object containing two 
 
 Example Output:
 
-'''[
+'''
+[
 
   {"action1": "open [something]", "action2": "close [something]"},
   
@@ -33,7 +34,8 @@ Example Output:
   
   ... // more action pairs
 
-]'''
+]
+'''
 
 ## Prompts in Section 3.1.2 generating objects to construct verb phrases
 

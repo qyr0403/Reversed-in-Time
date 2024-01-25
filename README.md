@@ -58,76 +58,43 @@ The prompts we mentioned in our paper to instruct GPT-4.
               ... // The remaining 17 verb phrases        
             ],      
           }
-    For this message, you just need to understand. I will input the action pairs I have provided in the next message. Please generate multiple replacement options for each action pair following these guidelines."""}]
+    For this message, you just need to understand. I will input the action pairs I have provided in the next message. Please generate multiple replacement options for each action pair following these guidelines.
+    """}]
 ## Prompts in Section 3.1.3 for rewriting annotations
-
-You are an assistant who specializes in language conversion and rewriting. Next you are going to carry out a task where the goal of the task is to rewrite a given number of sentences of text, generating 9 different versions, each of which should keep the meaning of the original text intact.
-
-In the rewriting process, you can selectively use the following devices:
-
-1. synonym replacement: use synonyms that have similar meanings to the words in the original text.
-
-2. Sentence restructuring: change the structure of the sentence, such as changing the active voice to passive voice, or adjusting the order of subordinate and main clauses.
-
-3. Adding or deleting modifiers: Adding or deleting adjectives, adverbs and other modifiers as appropriate to change the way a sentence is expressed but not its basic meaning.
-
-4. use different grammatical structures: e.g., use different grammatical devices such as participle structures, infinitive structures, etc. to express the same meaning.
-
-Both my input and the format you should output are in JSON format and should not contain redundancy for the program to parse.
-
-      {
-      
-        "text1": "It's a very nice day for a walk.",
-        
-        "text2": "The sky is blue.",
-        
-         // Other more input sentence cases
-         
-      }
-
-Sample output is as follows:
-
-      {
-      
-        "text1":{
-        
-        "original": "It's a very nice day for a walk.",
-        
-        "rewrites": [
-        
-          "Today's weather is pleasant and perfect for a walk outside.",
-          
-          "It's a beautiful sunny day, perfect for a walk.",
-          
-          "It's a sunny and pleasant day, just right for a walk outside.",
-          
-          "... (the remaining 6 rewritten versions)"
-          
-        ]}
-        
-        "text2":{
-        
-        "original": "The sky is blue.",
-        
-        "rewrites": [
-        
-          "The color blue covers the sky.",
-          
-          "The sky shows its blue color.",
-          
-          "We see the sky with a blue color.",
-          
-          "... (the remaining 6 rewritten versions)"
-          
-        ]}
-        
-        // Other more output
-        
-      }
-
-For this message you just need to understand it, I will give you the correctly formatted input next.
-
-
+    messages = [{"role" : "user", "content": f"""You are an assistant who specializes in language conversion and rewriting. Next you are going to carry out a task where the goal of the task is to rewrite a given number of sentences of text, generating 9 different versions, each of which should keep the meaning of the original text intact.
+    In the rewriting process, you can selectively use the following devices:
+    1. synonym replacement: use synonyms that have similar meanings to the words in the original text.
+    2. Sentence restructuring: change the structure of the sentence, such as changing the active voice to passive voice, or adjusting the order of subordinate and main clauses.
+    3. Adding or deleting modifiers: Adding or deleting adjectives, adverbs and other modifiers as appropriate to change the way a sentence is expressed but not its basic meaning.
+    4. use different grammatical structures: e.g., use different grammatical devices such as participle structures, infinitive structures, etc. to express the same meaning.
+    Both my input and the format you should output are in JSON format and should not contain redundancy for the program to parse.
+          {      
+            "text1": "It's a very nice day for a walk.",        
+            "text2": "The sky is blue.",        
+             // Other more input sentence cases         
+          }
+    Sample output is as follows:
+          {      
+            "text1":{        
+            "original": "It's a very nice day for a walk.",        
+            "rewrites": [        
+              "Today's weather is pleasant and perfect for a walk outside.",          
+              "It's a beautiful sunny day, perfect for a walk.",          
+              "It's a sunny and pleasant day, just right for a walk outside.",          
+              "... (the remaining 6 rewritten versions)"          
+            ]}        
+            "text2":{        
+            "original": "The sky is blue.",        
+            "rewrites": [        
+              "The color blue covers the sky.",          
+              "The sky shows its blue color.",          
+              "We see the sky with a blue color.",          
+              "... (the remaining 6 rewritten versions)"          
+            ]}        
+            // Other more output        
+          }
+    For this message you just need to understand it, I will give you the correctly formatted input next.
+    """}]
 
 
 

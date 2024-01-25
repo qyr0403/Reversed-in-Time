@@ -25,7 +25,7 @@ Use JSON format for output. Each action pair should be an object containing two 
 
 Example Output:
 
-''[
+'''[
 
   {"action1": "open [something]", "action2": "close [something]"},
   
@@ -33,7 +33,7 @@ Example Output:
   
   ... // more action pairs
 
-]''
+]'''
 
 ## Prompts in Section 3.1.2 generating objects to construct verb phrases
 
@@ -53,7 +53,7 @@ Example:
 
 Input:
 
-''[
+'''[
 
   {"action1": "open [something]", "action2": "close [something]"},
   
@@ -63,11 +63,11 @@ Input:
   
   ... // more action pairs
 
-]''
+]'''
 
 Output:
 
-''{
+'''{
 
   "action pair 1": [
   
@@ -105,7 +105,7 @@ Output:
   
   ],
 
-}''
+}'''
 
 For this message, you just need to understand. I will input the action pairs I have provided in the next message. Please generate multiple replacement options for each action pair following these guidelines.
 
@@ -125,7 +125,7 @@ In the rewriting process, you can selectively use the following devices:
 
 Both my input and the format you should output are in JSON format and should not contain redundancy for the program to parse.
 
-''{
+'''{
 
   "text1": "It's a very nice day for a walk.",
   
@@ -133,11 +133,11 @@ Both my input and the format you should output are in JSON format and should not
   
    // Other more input sentence cases
    
-}''
+}'''
 
 Sample output is as follows:
 
-''{
+'''{
 
   "text1":{
   
@@ -173,17 +173,11 @@ Sample output is as follows:
   
   // Other more output
   
-}''
+}'''
 
 For this message you just need to understand it, I will give you the correctly formatted input next.
 
-''{
 
-  "text1": "Use two long stainless steel rods to hold the patties on the side of the grill.",
-  
-  "text2": "Place the pastry between two long stainless steel rods and bake it in the oven.",
-  
-}''
 
 
 

@@ -15,11 +15,11 @@ The prompts we mentioned in our paper to instruct GPT-4.
     Output Format:
     Use JSON format for output. Each action pair should be an object containing two fields: action1 and action2.
     Example Output:
-        [
-          {"action1": "open [something]", "action2": "close [something]"},
-          {"action1": "pick up [something]", "action2": "put down [something]"},          
-          ... // more action pairs        
-        ]"""}]
+    [
+        {"action1": "open [something]", "action2": "close [something]"},
+        {"action1": "pick up [something]", "action2": "put down [something]"},          
+        ... // more action pairs        
+    ]"""}]
 
 ## Prompts in Section 3.1.2 generating objects to construct verb phrases
 

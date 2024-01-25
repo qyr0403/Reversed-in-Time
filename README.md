@@ -11,16 +11,26 @@ Task Objective: Generate a series of action pairs that are visually similar but 
 
 Specific Steps:
 
-1.Choose a common action, such as 'open something'.
-2.Determine the direct antonym action, such as 'close something'.
+1.Choose a common action, such as 'open [something]'.
+
+2.Determine the direct antonym action, such as 'close [something]'.
+
 3.Ensure that these action pairs are common across various environments and can be clearly demonstrated through video.
+
 4.Repeat the above steps to generate more action pairs.
+
 Output Format:
+
 Use JSON format for output. Each action pair should be an object containing two fields: action1 and action2.
 
 Example Output:
+
 [
+
 {"action1": "open [something]", "action2": "close [something]"},
+
 {"action1": "pick up [something]", "action2": "put down [something]"},
+
 ... // more action pairs
+
 ]"

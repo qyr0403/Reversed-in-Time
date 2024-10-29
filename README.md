@@ -7,7 +7,6 @@
 ## Table of Contents
 - [Overview](#overview)
 - [Datasets](#datasets)
-- [Models](#models)
 
 
 
